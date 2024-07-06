@@ -3,10 +3,7 @@ name: CI/CD Pipeline
 on:
   push:
     branches:
-      - main  # Déclenche le workflow sur des pushes vers la branche main
-  pull_request:
-    branches:
-      - main  # Déclenche le workflow sur des pull requests vers la branche main
+      - main  
 
 jobs:
   test:
@@ -15,14 +12,11 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
-        with:
-          node-version: '20'  # Utilisation de Node.js 20
         
-
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '20'  # Utilisation de Node.js 20
+          node-version: '20'  
 
       - name: Install dependencies
         run: |
