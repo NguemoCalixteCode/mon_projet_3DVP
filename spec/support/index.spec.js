@@ -8,8 +8,8 @@ describe("Application 3DVP", () => {
   beforeAll(() => {
     const dom = new JSDOM(
       `
-                    <!DOCTYPE html>
-                    <html lang="en">
+       <!DOCTYPE html>
+       <html lang="en">
           <head>
               <meta charset="UTF-8">
               <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,10 +24,8 @@ describe("Application 3DVP", () => {
               </div>
               <script src="script.js"></script>
           </body>
-          </html>
-
-           
-        `,
+        </html>    
+      `,
       { runScripts: "dangerously", resources: "usable" }
     );
 
