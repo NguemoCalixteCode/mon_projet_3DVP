@@ -23,7 +23,7 @@ Avant de commencer, assurez-vous d'avoir les éléments suivants installés sur 
 3. Tests Jasmine
    Les tests Jasmine sont configurés pour s'exécuter à chaque push ou pull request vers la branche main.
 
-   Pour exécuter les tests Jasmine localement, utilisez la commande suivante : jasmine
+   Pour exécuter les tests Jasmine localement, utilisez la commande suivante : npx jasmine
 
 4. Déploiement Docker
    Le pipeline CI/CD construit et déploie une image Docker de l'application.
