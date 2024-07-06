@@ -3,7 +3,7 @@ name: CI/CD Pipeline
 on:
   push:
     branches:
-      - main  # Déclenche le workflow sur des pushes vers la branche main
+      - main  
 
 jobs:
   test:
@@ -12,10 +12,19 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
+        
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '14'  
+
+      - name: Install dependencies
+        run: |
+          npm install
 
       - name: Run Jasmine tests
         run: |
-           jasmine
+          npx jasmine
   build:
     needs: test
     runs-on: ubuntu-latest
